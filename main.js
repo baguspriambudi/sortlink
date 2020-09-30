@@ -22,6 +22,7 @@ mongoose
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.enable('trust proxy');
 
 app.use(shortUrlRoutes);
 
