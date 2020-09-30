@@ -6,7 +6,7 @@ exports.sortUrl = async (req, res, next) => {
   try {
     const url = req.body.url;
     const shortUrl = shortid.generate();
-    const baseUrl = req.protocol + '://' + req.headers.host + '/' + shortUrl;
+    const baseUrl = `${req.protocol}://${req.headers.host}/${shortUrl}`;
 
     if (!validUrl.isUri(url)) {
       return res.status(401).json({
