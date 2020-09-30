@@ -6,6 +6,12 @@ exports.sortUrl = async (req, res, next) => {
   try {
     const url = req.body.url;
     const shortUrl = shortid.generate();
+
+    if (!validUrl.isUri(url)) {
+      return res.status(401).json({
+        msg: 'format is wrong',
+      });
+    }
     const result = await new Sortlink({
       url: url,
       shorturl: shortUrl,
