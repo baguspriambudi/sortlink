@@ -22,7 +22,8 @@ mongoose
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/create', shortUrlRoutes);
+
+app.use('/url', shortUrlRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({
