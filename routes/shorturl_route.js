@@ -3,7 +3,7 @@ const router = express.Router();
 
 const shortUrlController = require('../controller/shorturl');
 
-router.post('/', shortUrlController.sortUrl);
+router.post('/create', shortUrlController.sortUrl);
 router.get('/:shorturl', shortUrlController.redirect);
 
 module.exports = router;

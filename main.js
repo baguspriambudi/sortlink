@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-const shortUrlRoutes = require('./routes/route_shorturl');
+const shortUrlRoutes = require('./routes/shorturl_route');
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ mongoose
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use('/url', shortUrlRoutes);
+app.use(shortUrlRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({
