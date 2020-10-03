@@ -13,7 +13,7 @@ express is a web framework used to create a RESTful API, the excellence of which
 ## Requirements
 1. `npm` (node package manager)<br/>
 2. `npm i -s express` (from npm)
-## how to make a short url ?
+## How to make a short url ?
 1. open the postman application<br/>
 2. input this RESTful API `https://shorurl12.herokuapp.com/create` in postman with the post method<br/>
 3. enter in the postman url body as a key and value, for example : `{url : https://www.mongodb.com/cloud/atlas}`<br/>
